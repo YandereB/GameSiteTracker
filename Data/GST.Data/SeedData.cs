@@ -35,8 +35,10 @@
 
             if (!exists)
             {
-                var role = new IdentityRole();
-                role.Name = "Moderator";
+                var role = new IdentityRole
+                {
+                    Name = "Moderator"
+                };
                 await _roleManager.CreateAsync(role);
             }
 
